@@ -3,18 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SnsManager : MonoBehaviour
+public class SNSManager : MonoBehaviour
 {
-	public Text dateText;
-	public Text memoText;
-
-	private string date;
-	private string menmo;
-
+	[TextArea]
+	public string[] inputDate, inputMemoText;
+	public GameObject file, date, memo;
+	private Text date_text, memo_text;
     // Start is called before the first frame update
     void Start()
     {
-		
+		date_text = date.GetComponent<Text>();
+		memo_text = memo.GetComponent<Text>();
     }
 
     // Update is called once per frame
@@ -23,13 +22,16 @@ public class SnsManager : MonoBehaviour
         
     }
 
-	public void ExitBtnPress()
+	public void SNSPress(int i)
 	{
-		this.gameObject.SetActive(false);
+		date_text.text = inputDate[i];
+		memo_text.text = inputMemoText[i];
+		file.SetActive(true);
 	}
 
-	public void FirstMemo()
+	public void ExitPress()
 	{
-
+		file.SetActive(false);
 	}
+
 }

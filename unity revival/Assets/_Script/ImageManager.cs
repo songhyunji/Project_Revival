@@ -1,13 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ImageManager : MonoBehaviour
 {
+	[TextArea]
+	public string[] inputname;
+	public Sprite[] inputMemoText;
+	public GameObject file, name, image;
+	private Text name_text;
+	private Image image_data;
     // Start is called before the first frame update
     void Start()
     {
-        
+		name_text = name.GetComponent<Text>();
+		image_data = image.GetComponent<Image>();
     }
 
     // Update is called once per frame
@@ -16,8 +24,16 @@ public class ImageManager : MonoBehaviour
         
     }
 
-	public void ExitBtnPress()
+	public void SNSPress(int i)
 	{
-		this.gameObject.SetActive(false);
+		name_text.text = inputname[i];
+		image_data.sprite = inputMemoText[i];
+		file.SetActive(true);
 	}
+
+	public void ExitPress()
+	{
+		file.SetActive(false);
+	}
+
 }

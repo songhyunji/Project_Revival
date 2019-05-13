@@ -7,8 +7,8 @@ public class ImageManager : MonoBehaviour
 {
 	[TextArea]
 	public string[] inputname;
-	public Sprite[] inputMemoText;
-	public GameObject file, name, image;
+	public Sprite[] inputImage;
+	public GameObject file_img, name, image;
 	private Text name_text;
 	private Image image_data;
     // Start is called before the first frame update
@@ -27,13 +27,13 @@ public class ImageManager : MonoBehaviour
 	public void SNSPress(int i)
 	{
 		name_text.text = inputname[i];
-		image_data.sprite = inputMemoText[i];
-		file.SetActive(true);
+		image_data.sprite = inputImage[i];
+		file_img.SetActive(true);
 	}
 
 	public void ExitPress()
 	{
-		file.SetActive(false);
+		file_img.SetActive(false);
 	}
 
 }

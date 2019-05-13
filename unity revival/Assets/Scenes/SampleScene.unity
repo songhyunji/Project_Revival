@@ -349,8 +349,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 527876454}
-  - {fileID: 441089098}
   - {fileID: 1729520761}
+  - {fileID: 441089098}
   - {fileID: 1521997755}
   m_Father: {fileID: 463216536}
   m_RootOrder: 5
@@ -1185,12 +1185,12 @@ MonoBehaviour:
   - "\uC0AC\uC9C42"
   - "\uC0AC\uC9C43"
   - "\uC0AC\uC9C44"
-  inputMemoText:
+  inputImage:
   - {fileID: 21300000, guid: 826b48b95ff14e0478083037e7cb0bfb, type: 3}
   - {fileID: 21300000, guid: b0fe0435f6786c94f8d8f5b3628fa079, type: 3}
   - {fileID: 21300000, guid: 844ce77c3b449184eb5ff386a38c23ff, type: 3}
   - {fileID: 21300000, guid: 4c5b3cd12fdcbeb4997003c5a7919ece, type: 3}
-  file: {fileID: 1945132076}
+  file_img: {fileID: 1945132076}
   name: {fileID: 149385421}
   image: {fileID: 1554549262}
 --- !u!1 &365952160
@@ -1337,7 +1337,7 @@ GameObject:
   - component: {fileID: 441089100}
   - component: {fileID: 441089099}
   m_Layer: 5
-  m_Name: Memo Text
+  m_Name: Memo_sns
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1355,7 +1355,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 41587615}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.77875}
@@ -1395,7 +1395,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: text
+  m_Text: 'memo
+
+'
 --- !u!222 &441089100
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1416,7 +1418,7 @@ GameObject:
   - component: {fileID: 451010568}
   - component: {fileID: 451010567}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Memo_msg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1474,7 +1476,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: text
+  m_Text: memo
 --- !u!222 &451010568
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1500,7 +1502,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &463216536
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2392,23 +2394,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35c535ec4bc51394ab49109f7f5a2e1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputDate:
-  - "1\uC6D41\uC77C"
-  - "1\uC6D42\uC77C"
-  - "1\uC6D43\uC77C"
-  - "1\uC6D44\uC77C"
-  inputMemoText:
-  - "[@@@] [\uC624\uD6C4 3\uC2DC 10\uBD84]\r\n\uC0AC\uC2E4 \uB09C \uC9DC\uC7A5\uBA74\uC774
-    \uC2EB\uC5B4\r\n[@@@] [\uC624\uD6C4 3\uC2DC 10\uBD84]\r\n\uC9EC\uBF55\uC774 \uCD5C\uACE0\uC57C\r\n[OOO]
-    [\uC624\uD6C4 3\uC2DC 10\uBD84]\r\n\uADF8\uAC78 \uC65C \uC774\uC81C \uB9D0\uD574\r\n[OOO]
-    [\uC624\uD6C4 3\uC2DC 11\uBD84]\r\n\uB098\uB294 \uADF8\uB798\uB3C4 \uC9DC\uC7A5\uBA74\uC774
-    \uC88B\uC544\r"
-  - "\uC9DC\uC7A5"
-  - "\uC9EC\uBF55"
-  - "\uAD70\uB9CC\uB450\uB3C4"
-  file: {fileID: 585553570}
-  date: {fileID: 1194242072}
-  memo: {fileID: 451010565}
+  inputDate_msg:
+  - "a\uC6D4a\uC77C"
+  - "b\uC6D4b\uC77C"
+  - "c\uC6D4c\uC77C"
+  - "d\uC6D4d\uC77C"
+  inputMemo_msg:
+  - aaaaaaaaaaaaaaaaaaaaaaaaaa
+  - bbbbbbbbbbbbbbbbbbbbbbbbb
+  - cccccccccccccccccccccccccccccccc
+  - dddddddddddddddddddddddddddddddddd
+  file_msg: {fileID: 585553570}
+  date_msg: {fileID: 1194242072}
+  memo_msg: {fileID: 451010565}
 --- !u!1 &828092408
 GameObject:
   m_ObjectHideFlags: 0
@@ -3681,7 +3679,7 @@ GameObject:
   - component: {fileID: 1194242075}
   - component: {fileID: 1194242074}
   m_Layer: 5
-  m_Name: Date
+  m_Name: Date_msg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5129,19 +5127,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 122761ba6f01bd342bc05fc6e0f1e8cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputDate:
-  - "2\uC6D42\uC77C"
-  - "2\uC6D43\uC77C"
-  - "2\uC6D44\uC77C"
-  - "2\uC6D45\uC77C"
-  inputMemoText:
-  - sns0
-  - sns1
-  - sns2
-  - sns3
-  file: {fileID: 41587614}
-  date: {fileID: 1729520760}
-  memo: {fileID: 441089097}
+  inputDate_sns:
+  - "e\uC6D4e\uC77C"
+  - "f\uC6D4f\uC77C"
+  - "g\uC6D4g\uC77C"
+  - "h\uC6D4h\uC77C"
+  inputMemo_sns:
+  - eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+  - fffffffffffffffffffffffffffffffffffffffffffffff
+  - gggggggggggggggggggggggggggggggggggggggg
+  - hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+  file_sns: {fileID: 41587614}
+  date_sns: {fileID: 1729520760}
+  memo_sns: {fileID: 441089097}
 --- !u!1 &1729520760
 GameObject:
   m_ObjectHideFlags: 0
@@ -5154,7 +5152,7 @@ GameObject:
   - component: {fileID: 1729520763}
   - component: {fileID: 1729520762}
   m_Layer: 5
-  m_Name: Memo Date
+  m_Name: Date_sns
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5172,7 +5170,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 41587615}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -6007,7 +6005,7 @@ GameObject:
   - component: {fileID: 1945132080}
   - component: {fileID: 1945132079}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Image File
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

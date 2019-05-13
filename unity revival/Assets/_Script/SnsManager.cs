@@ -6,14 +6,14 @@ using UnityEngine.UI;
 public class SNSManager : MonoBehaviour
 {
 	[TextArea]
-	public string[] inputDate, inputMemoText;
-	public GameObject file, date, memo;
+	public string[] inputDate_sns, inputMemo_sns;
+	public GameObject file_sns, date_sns, memo_sns;
 	private Text date_text, memo_text;
     // Start is called before the first frame update
     void Start()
     {
-		date_text = date.GetComponent<Text>();
-		memo_text = memo.GetComponent<Text>();
+		date_text = date_sns.GetComponent<Text>();
+		memo_text = memo_sns.GetComponent<Text>();
     }
 
     // Update is called once per frame
@@ -24,14 +24,14 @@ public class SNSManager : MonoBehaviour
 
 	public void SNSPress(int i)
 	{
-		date_text.text = inputDate[i];
-		memo_text.text = inputMemoText[i];
-		file.SetActive(true);
+		date_text.text = inputDate_sns[i];
+		memo_text.text = inputMemo_sns[i];
+		file_sns.SetActive(true);
 	}
 
 	public void ExitPress()
 	{
-		file.SetActive(false);
+		file_sns.SetActive(false);
 	}
 
 }

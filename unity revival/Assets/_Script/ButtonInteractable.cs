@@ -27,13 +27,44 @@ public class ButtonInteractable : MonoBehaviour
     
     void Update()
     {
-        if ((_small11.isOn || _small12.isOn)&& (_small21.isOn || _small22.isOn) && (_small31.isOn || _small32.isOn)&& (_small41.isOn || _small42.isOn))
+        if (_small31 == null && _small32 == null && _small41 == null && _small42 == null)
         {
-            _btn.interactable = true;
+
+            if (_small21 == null && _small22 == null)
+            {
+                if (_small11.isOn || _small12.isOn)
+                {
+                    _btn.interactable = true;
+                }
+                else
+                {
+                    _btn.interactable = false;
+                }
+            }
+            else
+            {
+                if ((_small11.isOn || _small12.isOn) && (_small21.isOn || _small22.isOn))
+                {
+                    _btn.interactable = true;
+                }
+                else
+                {
+                    _btn.interactable = false;
+                }
+            }
         }
+        
         else
         {
-            _btn.interactable = false;
+            if ((_small11.isOn || _small12.isOn) && (_small21.isOn || _small22.isOn) && (_small31.isOn || _small32.isOn) && (_small41.isOn || _small42.isOn))
+            {
+
+                _btn.interactable = true;
+            }
+            else
+            {
+                _btn.interactable = false;
+            }
         }
     }
 }

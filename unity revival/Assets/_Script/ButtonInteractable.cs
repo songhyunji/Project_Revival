@@ -6,34 +6,34 @@ using UnityEngine.UI;
 
 public class ButtonInteractable : MonoBehaviour
 {
-    public Toggle small11, small12, small21, small22, small31, small32, small41, small42;
-    public Button btn;
+    public Toggle _small11, _small12, _small21, _small22, _small31, _small32, _small41, _small42;
+    public Button _btn;
 
    
     void Start()
     {
-        btn = GetComponent<Button>();
-        small11 = GetComponent<Toggle>();
-        small12 = GetComponent<Toggle>();
-        small21 = GetComponent<Toggle>();
-        small22 = GetComponent<Toggle>();
-        small31 = GetComponent<Toggle>();
-        small32 = GetComponent<Toggle>();
-        small41 = GetComponent<Toggle>();
-        small42 = GetComponent<Toggle>();
+        Button btn = _btn.GetComponent<Button>();
+        Toggle small11 = _small11.GetComponent<Toggle>();
+        Toggle small12 = _small12.GetComponent<Toggle>();
+        Toggle small21 = _small21.GetComponent<Toggle>();
+        Toggle small22 = _small22.GetComponent<Toggle>();
+        Toggle small31 = _small31.GetComponent<Toggle>();
+        Toggle small32 = _small32.GetComponent<Toggle>();
+        Toggle small41 = _small41.GetComponent<Toggle>();
+        Toggle small42 = _small42.GetComponent<Toggle>();
         btn.interactable = false;
     }
 
     
     void Update()
     {
-        if ((small11.isOn || small12.isOn)&& (small21.isOn || small22.isOn) && (small31.isOn || small32.isOn)&& (small41.isOn || small42.isOn))
+        if ((_small11.isOn || _small12.isOn)&& (_small21.isOn || _small22.isOn) && (_small31.isOn || _small32.isOn)&& (_small41.isOn || _small42.isOn))
         {
-            btn.interactable = true;
+            _btn.interactable = true;
         }
         else
         {
-            btn.interactable = false;
+            _btn.interactable = false;
         }
     }
 }

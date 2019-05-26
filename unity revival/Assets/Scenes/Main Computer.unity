@@ -2626,7 +2626,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &426678472
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9897,7 +9897,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1331447110
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12428,6 +12428,7 @@ GameObject:
   - component: {fileID: 1620521791}
   - component: {fileID: 1620521793}
   - component: {fileID: 1620521792}
+  - component: {fileID: 1620521794}
   m_Layer: 5
   m_Name: Charecteristic Question
   m_TagString: Untagged
@@ -12501,6 +12502,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1620521790}
   m_CullTransparentMesh: 0
+--- !u!114 &1620521794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620521790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c80decbb4e0b64caf83af93cb92519, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  small11: {fileID: 39828900}
+  small12: {fileID: 1039645216}
+  small21: {fileID: 458082738}
+  small22: {fileID: 586363916}
+  small31: {fileID: 1267431734}
+  small32: {fileID: 1316215998}
+  small41: {fileID: 1880723994}
+  small42: {fileID: 409733400}
+  btn: {fileID: 824141364}
 --- !u!1 &1620687964
 GameObject:
   m_ObjectHideFlags: 0

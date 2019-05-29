@@ -13,6 +13,7 @@ public class EndingSystem : MonoBehaviour
 
 	private Image mail;
 	private Color creditTextColor;
+	private Button btn;
 
 	public float animTime = 0.5f;         // Fade 애니메이션 재생 시간 (단위:초).  
 	private Image fadeImage;            // UGUI의 Image컴포넌트 참조 변수.  
@@ -26,7 +27,7 @@ public class EndingSystem : MonoBehaviour
 
 		date.text = System.DateTime.Now.ToLongDateString() + " " + System.DateTime.Now.ToLongTimeString();
 		mail = GetComponent<Image>();
-
+		btn = this.gameObject.GetComponent<Button>();
 		int x = PlayerPrefs.GetInt("Score");
 		if (x >= 0 && x <= 3)	// bad ending
 		{
@@ -34,11 +35,11 @@ public class EndingSystem : MonoBehaviour
 		}
 		else if (x >= 4 && x <= 7)	// normal ending
 		{
-			mail.sprite = mailImg[0];
+			mail.sprite = mailImg[1];
 		}
 		else if (x >= 8)	// true ending
 		{
-			mail.sprite = mailImg[0];
+			mail.sprite = mailImg[2];
 		}
 
 		yield return new WaitForSeconds(0.1f);
@@ -46,6 +47,7 @@ public class EndingSystem : MonoBehaviour
 
 	public void PressSceen()
 	{
+		btn.enabled = false;
 		StartCoroutine(FadeScene_0());
 	}
 

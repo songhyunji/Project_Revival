@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ending.unity
     guid: 362e4126d46ff5b4b8396f3b83de22b6
+  - enabled: 1
+    path: Assets/Scenes/Mail System.unity
+    guid: a2fab1016e8848a46ab3edc37ddd2665
   m_configObjects: {}

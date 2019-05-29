@@ -18,7 +18,7 @@ public class EndingImage : MonoBehaviour
         endingclickBtn.SetActive(false);
         
 
-        SceneManager.LoadScene("EndingImage");
+        SceneManager.LoadScene("Mail System");
 
         int x = 2;
         if (x >= 0 && x <= 3)

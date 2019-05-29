@@ -51,6 +51,6 @@ public class ButtonManager : MonoBehaviour
 		images.SetActive(false);
 		snsFiles.SetActive(false);
 		exitBtn.SetActive(false);
-		localScript._text = "C: > Program files > Project Revival > OOO";
+		localScript._text = "C: > Program files > Project Revival > 차유정";
 	}
 }

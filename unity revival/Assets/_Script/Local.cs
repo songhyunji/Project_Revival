@@ -12,7 +12,7 @@ public class Local : MonoBehaviour
     void Start()
     {
 		textComponent = GetComponent<Text>();
-		_text = "C: > Program files > Project Revival > OOO";
+		_text = "C: > Program files > Project Revival > 차유정";
 	}
 
     // Update is called once per frame
